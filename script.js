@@ -10,28 +10,21 @@ function get_random_element_from_array(arr) {
 
 function main() {
 
-    let name = document.getElementById('customname').value;
-
-    let is_us = document.getElementById('us').checked;
-
-    let story = ''
+    let name = document.getElementById('customname').value;  //will obtain name passed in by the user from the input field
+    let is_us = document.getElementById('us').checked;  //will be used to implement the applicable scale of measurement
+    let story = ''  //to avoid problems, we substantiate story here to allow story mutable to either if blocks
 
     if (is_us) {
-
         let measurements = ["fahrenheit", "pounds"]
-
         story =  create_unique_story(measurements, name);
 
     } else {
-
         let measurements = ["centigrade", "stone"]
-
         story = create_unique_story(measurements, name);
     }
 
-    document.querySelector('.story').style.visibility = 'visible';
-
-    document.getElementById('story_text').innerHTML = story;
+    document.querySelector('.story').style.visibility = 'visible';  // will make html visible
+    document.getElementById('story_text').innerHTML = story;  //will annex story to paragraph
 }
 
 function create_unique_story(measurements, name) {
