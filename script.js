@@ -10,7 +10,7 @@ function get_random_element_from_array(arr) {
 
 function main() {
 
-    let name = document.getElementById('customname').value;  //will obtain name passed in by the user from the input field
+    let name = document.getElementById('customname').value;  //will fetch name in input field
     let is_us = document.getElementById('us').checked;  //will be used to implement the applicable scale of measurement
     let story = ''  //to avoid problems, we substantiate story here to allow story mutable to either if blocks
 
